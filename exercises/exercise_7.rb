@@ -10,3 +10,12 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+
+puts "Please Put in your store name!"
+inputtedStore = gets.chomp
+
+# Store.find_or_create_by!(name: inputtedStore)
+# Store.create(name: inputtedStore)
+Store.create(name: inputtedStore)
+
+puts inputtedStore.errors.full_messages
